@@ -1,7 +1,6 @@
-# Pro<sup>2</sup>Guard
+# ProbGuard
 
-This is the implementation for paper:
-Pro<sup>2</sup>Guard: Proactive Runtime Enforcement of LLM Agent Safety via Probabilistic Model Checking 
+This is the implementation for paper `ProbGuard: Probabilistic Runtime Monitoring for LLM Agent Safety`. 
 
 
 ## 🚀 Get Started
@@ -54,8 +53,8 @@ python3 -m safereach.embodied_monitor
 python3 -m safereach.av_monitor
 ```
 
-## run embodied agent with runtime enforcement:
-Using Langchain + [AgentSpec](https://arxiv.org/abs/2503.18666) as llm agent with runtime enforcement, equipped with low level controller (provided by [SafeAgentBench](https://github.com/shengyin1224/SafeAgentBench)).
+## run embodied agent with runtime monitoring:
+Using Langchain + [AgentSpec](https://arxiv.org/abs/2503.18666) as llm agent with runtime monitoring, equipped with low level controller (provided by [SafeAgentBench](https://github.com/shengyin1224/SafeAgentBench)).
 Example: src/embodied_agent.py
 ```python
 from agentspec.controlled_agent_excector import initialize_controlled_agent
@@ -88,11 +87,11 @@ agent.invoke(task_description)
 
 ```
 
-## integrating Pro<sup>2</sup>Guard on autonomous vehicle:
+## integrating ProbGuard on autonomous vehicle:
 
 This can be achieved by generating [muDrive](https://arxiv.org/pdf/2407.13201) scripts that dynamically adjust planning settings.
 
-## Extending Pro<sup>2</sup>Guard to new Domains:
+## Extending ProbGuard to new Domains:
 
 The core requirement is implementing an  `Abstraction.py` class:
 

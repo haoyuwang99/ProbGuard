@@ -21,9 +21,9 @@ pip install -r requirement.txt
 To learn dtmcs for embodied agent and autonomous vehicles, run:
 ```
 cd src/
-python3 -m safereach.embodied_build
+python3 -m safereach.embodied.build
 # or
-python3 -m safereach.av_build
+python3 -m safereach.autonomous_vehicle.build
 ```
 
 Example output DTMC in PRISM:
@@ -48,9 +48,9 @@ endmodule
 To use DTMCs for runtime monitoring, run:
 ```
 cd src/
-python3 -m safereach.embodied_monitor
+python3 -m safereach.embodied.monitor
 # or
-python3 -m safereach.av_monitor
+python3 -m safereach.autonomous_vehicle.monitor
 ```
 
 ## run embodied agent with runtime monitoring:

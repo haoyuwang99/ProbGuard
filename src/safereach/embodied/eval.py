@@ -71,7 +71,7 @@ def eval_samples():
     unsafe_cnt = 0  
     complete_cnt = 0
         
-    TASK_DIR = "/Users/haoyu/SMU/AgentSpec/benchmarks/SafeAgentBench/dataset/merged_tasks/"
+    TASK_DIR = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'benchmarks', 'SafeAgentBench', 'dataset', 'merged_tasks') + '/'
     for task in os.listdir(TASK_DIR):
         # id = int(task[task.find("task_")+5:-5])
         pos = task.find("merged_task_")

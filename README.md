@@ -18,30 +18,58 @@ pip install -r requirement.txt
 ```
 
 ### Learning DTMCs
-To learn dtmcs for embodied agent and autonomous vehicles, run:
+
+#### From AV traces with predefined predicates
+
+Use `learn_dtmc.py` to learn a DTMC from a set of AV traces with predefined predicates:
+
+```bash
+cd src/
+
+# Learn DTMC from traces (e.g., 10 traces, downsampled every 100 steps)
+python3 learn_dtmc.py /path/to/av_traces/ \
+    --num_traces 10 \
+    --predicates pedestrian_npc \
+    --downsample 100 \
+    --out dtmc_out/
 ```
+
+Available predicate sets:
+- `pedestrian_npc` — NPC distance (<50m, <20m), speed (>2.0), lane changing
+- `traffic_light` — red/yellow light, speed (moving/stopped)
+- `npc_interaction` — NPC close (<8m), speed, priority NPC
+- `junction` — near junction, red light, speed
+
+This outputs:
+- `dtmc.prism` — PRISM model file
+- `model.json` — full model with state interpretations
+
+#### Using the built-in abstraction pipeline
+
+For more advanced DTMC learning with STL-based predicates:
+```bash
 cd src/
 python3 -m safereach.embodied.build
 # or
 python3 -m safereach.autonomous_vehicle.build
 ```
 
-Example output DTMC in PRISM:
+#### Example output DTMC in PRISM:
 ```
 dtmc
 
 module dtmc_model
 
-    s : [0..4] init 0;
+    s : [0..10] init 0;
 
-    [] s=0 -> 17/50 : (s'=0) + 1/50 : (s'=1) + 31/50 : (s'=2) + 1/50 : (s'=4);
-    [] s=1 -> 1/4 : (s'=0) + 1/4 : (s'=1) + 1/4 : (s'=3) + 1/4 : (s'=4);
-    [] s=2 -> 1/168 : (s'=0) + 45/56 : (s'=2) + 1/168 : (s'=3) + 31/168 : (s'=4);
-    [] s=3 -> 1/4 : (s'=1) + 1/4 : (s'=2) + 1/4 : (s'=3) + 1/4 : (s'=4);
-    [] s=4 -> 1 : (s'=4);
+    [] s=0 -> 1/3 : (s'=0) + 2/15 : (s'=1) + 1/30 : (s'=2) + 1/5 : (s'=3) + ...;
+    [] s=1 -> 1/373 : (s'=0) + 358/373 : (s'=1) + 6/373 : (s'=6) + ...;
+    ...
 
 endmodule
 ```
+
+Each state is a bitstring encoding: `collision | reach | pred1 | pred2 | ...`
 
 ### leverage DTMCs for monitoring (offline test)
 

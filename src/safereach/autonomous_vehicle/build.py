@@ -10,7 +10,7 @@ def av_build_model(abs, logs, model_path = "default_av.dtmc"):
     model = build_model(logs, abs)
     store_model(model, model_path, abs)
 
-SAMPLES = "/Users/haoyu/SMU/AgentSpec/src/safereach/autonomous_vehicle/samples/"
+SAMPLES = os.path.join(os.path.dirname(__file__), 'samples') + '/'
 # SCENEARIO = "safereach/autonomous_vehicle/samples/Law38_1_1/"
 for s in os.listdir(SAMPLES):
     SCENEARIO = f"{SAMPLES}{s}/" 

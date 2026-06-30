@@ -59,7 +59,7 @@ def embodied_build_model(dir, model_path, alpha=1.0):
         
         raise e
 
-LOG_DIR = '/Users/haoyu/SMU/AgentSpec/src/safereach/embodied/merged_sample/'
+LOG_DIR = os.path.join(os.path.dirname(__file__), 'merged_sample') + '/'
 MODEL_DIR = 'safereach/dtmcs/embodied/'
 log_dirs = [f for f in os.listdir(LOG_DIR) if f.startswith('log_raw_t') and not f.endswith("jsonl")]
 for dir in log_dirs : 

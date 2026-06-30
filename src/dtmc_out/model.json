@@ -1,0 +1,29 @@
+{
+  "states": [
+    "000001"
+  ],
+  "state_index": {
+    "000001": 0
+  },
+  "state_interpret": {
+    "000001": {
+      "collision": false,
+      "reach": false,
+      "trafficLightAheadcolor == 1.0": false,
+      "trafficLightAheadcolor == 2.0": false,
+      "speed > 0.5": false,
+      "speed < 0.5": true
+    }
+  },
+  "transition_probs": {
+    "0": {
+      "0": "1"
+    }
+  },
+  "predicates": [
+    "trafficLightAheadcolor == 1.0",
+    "trafficLightAheadcolor == 2.0",
+    "speed > 0.5",
+    "speed < 0.5"
+  ]
+}

@@ -3,7 +3,7 @@
 # Startup script for PRISM (Mac OS X)
 
 # PRISM home directory
-PRISM_DIR="/Users/haoyu/SMU/AgentSpec/prism"
+PRISM_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
 # Command to launch Java
 if [ "$PRISM_JAVA" = "" ]; then

@@ -1,6 +1,6 @@
-# Generated from spec_lang/AgentSpec.g4 by ANTLR 4.13.2
+# Generated from AgentSpec.g4 by ANTLR 4.7.2
 from antlr4 import *
-if "." in __name__:
+if __name__ is not None and "." in __name__:
     from .AgentSpecParser import AgentSpecParser
 else:
     from AgentSpecParser import AgentSpecParser
@@ -152,5 +152,3 @@ class AgentSpecListener(ParseTreeListener):
         pass
 
 
-
-del AgentSpecParser

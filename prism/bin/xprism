@@ -3,7 +3,7 @@
 # Startup script for PRISM GUI (Linux/Solaris)
 
 # PRISM home directory
-PRISM_DIR="/Users/haoyu/SMU/AgentSpec/prism"
+PRISM_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
 # Launch using main PRISM script
 PRISM_MAINCLASS=userinterface.GUIPrism

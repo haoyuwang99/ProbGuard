@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "agentspec"
 version = "0.1.0"
 dependencies = [
-    "antlr4-python3-runtime==4.13",
+    "antlr4-python3-runtime==4.7",
     "langchain",
     "langchain-core",
     "langchain-text-splitters",

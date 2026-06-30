@@ -15,7 +15,7 @@ def load_abstraction(abstraction_desc_path):
 
 BOUNDED_RESPONSE = "bound"
 LAW_VIOLATION_PREDICATE = "law"
-LOG_BASE = "/Users/haoyu/SMU/AgentSpec/src/safereach/autonomous_vehicle/tests/"
+LOG_BASE = os.path.join(os.path.dirname(__file__), 'tests') + '/'
 DTMC_BASE = "safereach/dtmcs/"
 
 unsafe_predicates = {

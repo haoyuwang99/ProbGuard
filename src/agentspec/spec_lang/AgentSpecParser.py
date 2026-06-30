@@ -1,60 +1,59 @@
-# Generated from spec_lang/AgentSpec.g4 by ANTLR 4.13.2
+# Generated from AgentSpec.g4 by ANTLR 4.7.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
+from typing.io import TextIO
 import sys
-if sys.version_info[1] > 5:
-	from typing import TextIO
-else:
-	from typing.io import TextIO
+
 
 def serializedATN():
-    return [
-        4,1,32,136,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
-        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,2,15,7,15,1,0,5,0,34,8,0,10,0,12,0,37,9,0,1,0,1,0,1,1,
-        1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,4,1,4,4,4,56,8,
-        4,11,4,12,4,57,1,5,1,5,4,5,62,8,5,11,5,12,5,63,1,6,1,6,1,7,1,7,1,
-        7,1,7,1,8,1,8,1,8,1,8,1,8,3,8,77,8,8,1,8,1,8,1,8,1,8,5,8,83,8,8,
-        10,8,12,8,86,9,8,1,9,1,9,1,9,3,9,91,8,9,1,10,1,10,1,10,1,10,1,10,
-        1,10,1,10,1,10,5,10,101,8,10,10,10,12,10,104,9,10,1,10,1,10,1,10,
-        1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,12,3,12,117,8,12,1,13,1,13,
-        1,13,1,13,1,13,1,14,1,14,1,14,1,15,4,15,128,8,15,11,15,12,15,129,
-        1,15,1,15,1,15,1,15,1,15,0,1,16,16,0,2,4,6,8,10,12,14,16,18,20,22,
-        24,26,28,30,0,2,2,0,25,25,29,32,1,0,27,28,134,0,35,1,0,0,0,2,40,
-        1,0,0,0,4,46,1,0,0,0,6,50,1,0,0,0,8,53,1,0,0,0,10,59,1,0,0,0,12,
-        65,1,0,0,0,14,67,1,0,0,0,16,76,1,0,0,0,18,90,1,0,0,0,20,92,1,0,0,
-        0,22,108,1,0,0,0,24,116,1,0,0,0,26,118,1,0,0,0,28,123,1,0,0,0,30,
-        127,1,0,0,0,32,34,3,2,1,0,33,32,1,0,0,0,34,37,1,0,0,0,35,33,1,0,
-        0,0,35,36,1,0,0,0,36,38,1,0,0,0,37,35,1,0,0,0,38,39,5,0,0,1,39,1,
-        1,0,0,0,40,41,3,4,2,0,41,42,3,6,3,0,42,43,3,8,4,0,43,44,3,10,5,0,
-        44,45,5,8,0,0,45,3,1,0,0,0,46,47,5,1,0,0,47,48,5,18,0,0,48,49,5,
-        25,0,0,49,5,1,0,0,0,50,51,5,2,0,0,51,52,3,12,6,0,52,7,1,0,0,0,53,
-        55,5,3,0,0,54,56,3,24,12,0,55,54,1,0,0,0,56,57,1,0,0,0,57,55,1,0,
-        0,0,57,58,1,0,0,0,58,9,1,0,0,0,59,61,5,4,0,0,60,62,3,18,9,0,61,60,
-        1,0,0,0,62,63,1,0,0,0,63,61,1,0,0,0,63,64,1,0,0,0,64,11,1,0,0,0,
-        65,66,7,0,0,0,66,13,1,0,0,0,67,68,5,26,0,0,68,69,5,9,0,0,69,70,3,
-        16,8,0,70,15,1,0,0,0,71,72,6,8,-1,0,72,77,5,26,0,0,73,77,3,22,11,
-        0,74,77,5,25,0,0,75,77,3,20,10,0,76,71,1,0,0,0,76,73,1,0,0,0,76,
-        74,1,0,0,0,76,75,1,0,0,0,77,84,1,0,0,0,78,79,10,2,0,0,79,80,5,16,
-        0,0,80,81,5,26,0,0,81,83,5,17,0,0,82,78,1,0,0,0,83,86,1,0,0,0,84,
-        82,1,0,0,0,84,85,1,0,0,0,85,17,1,0,0,0,86,84,1,0,0,0,87,91,5,23,
-        0,0,88,91,3,20,10,0,89,91,3,30,15,0,90,87,1,0,0,0,90,88,1,0,0,0,
-        90,89,1,0,0,0,91,19,1,0,0,0,92,93,5,22,0,0,93,94,5,11,0,0,94,95,
-        5,25,0,0,95,96,5,10,0,0,96,97,5,13,0,0,97,102,3,14,7,0,98,99,5,10,
-        0,0,99,101,3,14,7,0,100,98,1,0,0,0,101,104,1,0,0,0,102,100,1,0,0,
-        0,102,103,1,0,0,0,103,105,1,0,0,0,104,102,1,0,0,0,105,106,5,14,0,
-        0,106,107,5,12,0,0,107,21,1,0,0,0,108,109,7,1,0,0,109,23,1,0,0,0,
-        110,117,5,6,0,0,111,117,5,7,0,0,112,113,5,20,0,0,113,117,3,24,12,
-        0,114,117,5,21,0,0,115,117,3,26,13,0,116,110,1,0,0,0,116,111,1,0,
-        0,0,116,112,1,0,0,0,116,114,1,0,0,0,116,115,1,0,0,0,117,25,1,0,0,
-        0,118,119,5,25,0,0,119,120,5,11,0,0,120,121,3,22,11,0,121,122,5,
-        12,0,0,122,27,1,0,0,0,123,124,5,25,0,0,124,125,5,9,0,0,125,29,1,
-        0,0,0,126,128,3,28,14,0,127,126,1,0,0,0,128,129,1,0,0,0,129,127,
-        1,0,0,0,129,130,1,0,0,0,130,131,1,0,0,0,131,132,5,25,0,0,132,133,
-        5,19,0,0,133,134,3,22,11,0,134,31,1,0,0,0,9,35,57,63,76,84,90,102,
-        116,129
-    ]
+    with StringIO() as buf:
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\"")
+        buf.write("\u008a\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
+        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\7\2$\n\2\f\2\16")
+        buf.write("\2\'\13\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4")
+        buf.write("\3\4\3\5\3\5\3\5\3\6\3\6\6\6:\n\6\r\6\16\6;\3\7\3\7\6")
+        buf.write("\7@\n\7\r\7\16\7A\3\b\3\b\3\t\3\t\3\t\3\t\3\n\3\n\3\n")
+        buf.write("\3\n\3\n\5\nO\n\n\3\n\3\n\3\n\3\n\7\nU\n\n\f\n\16\nX\13")
+        buf.write("\n\3\13\3\13\3\13\5\13]\n\13\3\f\3\f\3\f\3\f\3\f\3\f\3")
+        buf.write("\f\3\f\7\fg\n\f\f\f\16\fj\13\f\3\f\3\f\3\f\3\r\3\r\3\16")
+        buf.write("\3\16\3\16\3\16\3\16\3\16\5\16w\n\16\3\17\3\17\3\17\3")
+        buf.write("\17\3\17\3\20\3\20\3\20\3\21\6\21\u0082\n\21\r\21\16\21")
+        buf.write("\u0083\3\21\3\21\3\21\3\21\3\21\2\3\22\22\2\4\6\b\n\f")
+        buf.write("\16\20\22\24\26\30\32\34\36 \2\4\4\2\33\33\37\"\3\2\35")
+        buf.write("\36\2\u0088\2%\3\2\2\2\4*\3\2\2\2\6\60\3\2\2\2\b\64\3")
+        buf.write("\2\2\2\n\67\3\2\2\2\f=\3\2\2\2\16C\3\2\2\2\20E\3\2\2\2")
+        buf.write("\22N\3\2\2\2\24\\\3\2\2\2\26^\3\2\2\2\30n\3\2\2\2\32v")
+        buf.write("\3\2\2\2\34x\3\2\2\2\36}\3\2\2\2 \u0081\3\2\2\2\"$\5\4")
+        buf.write("\3\2#\"\3\2\2\2$\'\3\2\2\2%#\3\2\2\2%&\3\2\2\2&(\3\2\2")
+        buf.write("\2\'%\3\2\2\2()\7\2\2\3)\3\3\2\2\2*+\5\6\4\2+,\5\b\5\2")
+        buf.write(",-\5\n\6\2-.\5\f\7\2./\7\n\2\2/\5\3\2\2\2\60\61\7\3\2")
+        buf.write("\2\61\62\7\24\2\2\62\63\7\33\2\2\63\7\3\2\2\2\64\65\7")
+        buf.write("\4\2\2\65\66\5\16\b\2\66\t\3\2\2\2\679\7\5\2\28:\5\32")
+        buf.write("\16\298\3\2\2\2:;\3\2\2\2;9\3\2\2\2;<\3\2\2\2<\13\3\2")
+        buf.write("\2\2=?\7\6\2\2>@\5\24\13\2?>\3\2\2\2@A\3\2\2\2A?\3\2\2")
+        buf.write("\2AB\3\2\2\2B\r\3\2\2\2CD\t\2\2\2D\17\3\2\2\2EF\7\34\2")
+        buf.write("\2FG\7\13\2\2GH\5\22\n\2H\21\3\2\2\2IJ\b\n\1\2JO\7\34")
+        buf.write("\2\2KO\5\30\r\2LO\7\33\2\2MO\5\26\f\2NI\3\2\2\2NK\3\2")
+        buf.write("\2\2NL\3\2\2\2NM\3\2\2\2OV\3\2\2\2PQ\f\4\2\2QR\7\22\2")
+        buf.write("\2RS\7\34\2\2SU\7\23\2\2TP\3\2\2\2UX\3\2\2\2VT\3\2\2\2")
+        buf.write("VW\3\2\2\2W\23\3\2\2\2XV\3\2\2\2Y]\7\31\2\2Z]\5\26\f\2")
+        buf.write("[]\5 \21\2\\Y\3\2\2\2\\Z\3\2\2\2\\[\3\2\2\2]\25\3\2\2")
+        buf.write("\2^_\7\30\2\2_`\7\r\2\2`a\7\33\2\2ab\7\f\2\2bc\7\17\2")
+        buf.write("\2ch\5\20\t\2de\7\f\2\2eg\5\20\t\2fd\3\2\2\2gj\3\2\2\2")
+        buf.write("hf\3\2\2\2hi\3\2\2\2ik\3\2\2\2jh\3\2\2\2kl\7\20\2\2lm")
+        buf.write("\7\16\2\2m\27\3\2\2\2no\t\3\2\2o\31\3\2\2\2pw\7\b\2\2")
+        buf.write("qw\7\t\2\2rs\7\26\2\2sw\5\32\16\2tw\7\27\2\2uw\5\34\17")
+        buf.write("\2vp\3\2\2\2vq\3\2\2\2vr\3\2\2\2vt\3\2\2\2vu\3\2\2\2w")
+        buf.write("\33\3\2\2\2xy\7\33\2\2yz\7\r\2\2z{\5\30\r\2{|\7\16\2\2")
+        buf.write("|\35\3\2\2\2}~\7\33\2\2~\177\7\13\2\2\177\37\3\2\2\2\u0080")
+        buf.write("\u0082\5\36\20\2\u0081\u0080\3\2\2\2\u0082\u0083\3\2\2")
+        buf.write("\2\u0083\u0081\3\2\2\2\u0083\u0084\3\2\2\2\u0084\u0085")
+        buf.write("\3\2\2\2\u0085\u0086\7\33\2\2\u0086\u0087\7\25\2\2\u0087")
+        buf.write("\u0088\5\30\r\2\u0088!\3\2\2\2\13%;ANV\\hv\u0083")
+        return buf.getvalue()
+
 
 class AgentSpecParser ( Parser ):
 
@@ -139,7 +138,7 @@ class AgentSpecParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.13.2")
+        self.checkVersion("4.7.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -147,7 +146,6 @@ class AgentSpecParser ( Parser ):
 
 
     class ProgramContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -156,7 +154,7 @@ class AgentSpecParser ( Parser ):
         def EOF(self):
             return self.getToken(AgentSpecParser.EOF, 0)
 
-        def rule_(self, i:int=None):
+        def rule(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(AgentSpecParser.RuleContext)
             else:
@@ -187,9 +185,9 @@ class AgentSpecParser ( Parser ):
             self.state = 35
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==1:
+            while _la==AgentSpecParser.RULE:
                 self.state = 32
-                self.rule_()
+                self.rule()
                 self.state = 37
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -206,7 +204,6 @@ class AgentSpecParser ( Parser ):
 
 
     class RuleContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -245,7 +242,7 @@ class AgentSpecParser ( Parser ):
 
 
 
-    def rule_(self):
+    def rule(self):
 
         localctx = AgentSpecParser.RuleContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_rule)
@@ -271,7 +268,6 @@ class AgentSpecParser ( Parser ):
 
 
     class RuleClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -322,7 +318,6 @@ class AgentSpecParser ( Parser ):
 
 
     class TriggerClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -369,7 +364,6 @@ class AgentSpecParser ( Parser ):
 
 
     class CheckClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -417,7 +411,7 @@ class AgentSpecParser ( Parser ):
                 self.state = 57 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 36700352) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << AgentSpecParser.TRUE) | (1 << AgentSpecParser.FALSE) | (1 << AgentSpecParser.NOT) | (1 << AgentSpecParser.PREDICATE) | (1 << AgentSpecParser.IDENTIFIER))) != 0)):
                     break
 
         except RecognitionException as re:
@@ -430,7 +424,6 @@ class AgentSpecParser ( Parser ):
 
 
     class EnforceClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -478,7 +471,7 @@ class AgentSpecParser ( Parser ):
                 self.state = 63 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 46137344) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << AgentSpecParser.INVOKE) | (1 << AgentSpecParser.ENFORCEMENT) | (1 << AgentSpecParser.IDENTIFIER))) != 0)):
                     break
 
         except RecognitionException as re:
@@ -491,7 +484,6 @@ class AgentSpecParser ( Parser ):
 
 
     class EventContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -535,7 +527,7 @@ class AgentSpecParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 65
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 8086618112) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << AgentSpecParser.IDENTIFIER) | (1 << AgentSpecParser.STATE_CHANGE) | (1 << AgentSpecParser.BEFORE_ACTION) | (1 << AgentSpecParser.AFTER_ACTION) | (1 << AgentSpecParser.FINISH))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -550,7 +542,6 @@ class AgentSpecParser ( Parser ):
 
 
     class KvPairContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -602,7 +593,6 @@ class AgentSpecParser ( Parser ):
 
 
     class ValueContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -657,19 +647,19 @@ class AgentSpecParser ( Parser ):
             self.state = 76
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [26]:
+            if token in [AgentSpecParser.STRING]:
                 self.state = 72
                 self.match(AgentSpecParser.STRING)
                 pass
-            elif token in [27, 28]:
+            elif token in [AgentSpecParser.INTEGER, AgentSpecParser.FLOAT]:
                 self.state = 73
                 self.number()
                 pass
-            elif token in [25]:
+            elif token in [AgentSpecParser.IDENTIFIER]:
                 self.state = 74
                 self.match(AgentSpecParser.IDENTIFIER)
                 pass
-            elif token in [22]:
+            elif token in [AgentSpecParser.INVOKE]:
                 self.state = 75
                 self.actionInvoke()
                 pass
@@ -711,7 +701,6 @@ class AgentSpecParser ( Parser ):
 
 
     class EnforcementContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -750,17 +739,17 @@ class AgentSpecParser ( Parser ):
             self.state = 90
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [23]:
+            if token in [AgentSpecParser.ENFORCEMENT]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 87
                 self.match(AgentSpecParser.ENFORCEMENT)
                 pass
-            elif token in [22]:
+            elif token in [AgentSpecParser.INVOKE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 88
                 self.actionInvoke()
                 pass
-            elif token in [25]:
+            elif token in [AgentSpecParser.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 89
                 self.config()
@@ -778,7 +767,6 @@ class AgentSpecParser ( Parser ):
 
 
     class ActionInvokeContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -851,7 +839,7 @@ class AgentSpecParser ( Parser ):
             self.state = 102
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==10:
+            while _la==AgentSpecParser.COMMA:
                 self.state = 98
                 self.match(AgentSpecParser.COMMA)
                 self.state = 99
@@ -874,7 +862,6 @@ class AgentSpecParser ( Parser ):
 
 
     class NumberContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -909,7 +896,7 @@ class AgentSpecParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 108
             _la = self._input.LA(1)
-            if not(_la==27 or _la==28):
+            if not(_la==AgentSpecParser.INTEGER or _la==AgentSpecParser.FLOAT):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -924,7 +911,6 @@ class AgentSpecParser ( Parser ):
 
 
     class PredicateContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -972,29 +958,29 @@ class AgentSpecParser ( Parser ):
             self.state = 116
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [6]:
+            if token in [AgentSpecParser.TRUE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 110
                 self.match(AgentSpecParser.TRUE)
                 pass
-            elif token in [7]:
+            elif token in [AgentSpecParser.FALSE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 111
                 self.match(AgentSpecParser.FALSE)
                 pass
-            elif token in [20]:
+            elif token in [AgentSpecParser.NOT]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 112
                 self.match(AgentSpecParser.NOT)
                 self.state = 113
                 self.predicate()
                 pass
-            elif token in [21]:
+            elif token in [AgentSpecParser.PREDICATE]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 114
                 self.match(AgentSpecParser.PREDICATE)
                 pass
-            elif token in [25]:
+            elif token in [AgentSpecParser.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 115
                 self.predicate_func()
@@ -1012,7 +998,6 @@ class AgentSpecParser ( Parser ):
 
 
     class Predicate_funcContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1069,7 +1054,6 @@ class AgentSpecParser ( Parser ):
 
 
     class NamespaceContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1115,7 +1099,6 @@ class AgentSpecParser ( Parser ):
 
 
     class ConfigContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)

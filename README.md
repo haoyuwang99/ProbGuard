@@ -26,15 +26,15 @@ Use `learn_dtmc.py` to learn a DTMC from a set of AV traces with predefined pred
 ```bash
 cd src/
 
-# Learn DTMC from traces (e.g., 10 traces, downsampled every 100 steps)
-python3 learn_dtmc.py /path/to/av_traces/ \
+# Learn DTMC from sample traces 
+python3 learn_dtmc.py sample_traces/ \
     --num_traces 10 \
     --predicates pedestrian_npc \
     --downsample 100 \
     --out dtmc_out/
 ```
 
-Available predicate sets:
+Example predicate sets:
 - `pedestrian_npc` — NPC distance (<50m, <20m), speed (>2.0), lane changing
 - `traffic_light` — red/yellow light, speed (moving/stopped)
 - `npc_interaction` — NPC close (<8m), speed, priority NPC

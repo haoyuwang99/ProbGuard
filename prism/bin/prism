@@ -3,7 +3,7 @@
 # Startup script for PRISM (Mac OS X)
 
 # PRISM home directory
-PRISM_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PRISM_DIR="/Users/haoyu/ProbGuard/prism"
 
 # Command to launch Java
 if [ "$PRISM_JAVA" = "" ]; then
@@ -11,8 +11,10 @@ if [ "$PRISM_JAVA" = "" ]; then
 	# On OS X, we want to avoiding calling java from the /usr/bin link
 	# since it causes problems with dynamic linking (DYLD_LIBRARY_PATH)
 	if $(which java | grep -q '^/usr/bin'); then
-		if [ -x /usr/libexec/java_home ]; then
+		if [ -x /usr/libexec/java_home ] && /usr/libexec/java_home 2>/dev/null 1>/dev/null; then
 			PRISM_JAVA=`/usr/libexec/java_home`"/bin/java"
+		elif [ -x /opt/homebrew/opt/openjdk@11/bin/java ]; then
+			PRISM_JAVA=/opt/homebrew/opt/openjdk@11/bin/java
 		fi
 	fi
 fi

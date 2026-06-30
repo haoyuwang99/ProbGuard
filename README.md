@@ -1,4 +1,4 @@
-# ProbGuard
+ ProbGuard
 
 This is the implementation for paper `ProbGuard: Probabilistic Runtime Monitoring for LLM Agent Safety`. 
 
@@ -28,9 +28,7 @@ cd src/
 
 # Learn DTMC from sample traces 
 python3 learn_dtmc.py sample_traces/ \
-    --num_traces 10 \
     --predicates pedestrian_npc \
-    --downsample 100 \
     --out dtmc_out/
 ```
 
@@ -43,16 +41,6 @@ Example predicate sets:
 This outputs:
 - `dtmc.prism` — PRISM model file
 - `model.json` — full model with state interpretations
-
-#### Using the built-in abstraction pipeline
-
-For more advanced DTMC learning with STL-based predicates:
-```bash
-cd src/
-python3 -m safereach.embodied.build
-# or
-python3 -m safereach.autonomous_vehicle.build
-```
 
 #### Example output DTMC in PRISM:
 ```
@@ -71,17 +59,7 @@ endmodule
 
 Each state is a bitstring encoding: `collision | reach | pred1 | pred2 | ...`
 
-### leverage DTMCs for monitoring (offline test)
-
-To use DTMCs for runtime monitoring, run:
-```
-cd src/
-python3 -m safereach.embodied.monitor
-# or
-python3 -m safereach.autonomous_vehicle.monitor
-```
-
-## run embodied agent with runtime monitoring:
+## Run embodied agent with runtime monitoring:
 Using Langchain + [AgentSpec](https://arxiv.org/abs/2503.18666) as llm agent with runtime monitoring, equipped with low level controller (provided by [SafeAgentBench](https://github.com/shengyin1224/SafeAgentBench)).
 Example: src/embodied_agent.py
 ```python
